@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
     <title>World Clock - Natania Ezeigwe</title>
   </head>
   <body>
     <div class="clock-container">
       <h1>World Clock</h1>
 
-      <select>
+      <select id="city-select" aria-label="City Selector">
         <option value="">Select a city...</option>
-        <option value="">London</option>
-        <option value="">New York</option>
-        <option value="">Auckland</option>
+        <option value="Europe/London">London</option>
+        <option value="America/New_York">New York</option>
+        <option value="Pacific/Auckland">Auckland</option>
       </select>
 
       <div id="los-angeles" class="city">
@@ -40,12 +42,16 @@
       <div>
         <p>
           Created by ❤️<strong>
-            <a target="_blank" href="http://www.github.com/QueenNatty"
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="http://www.github.com/QueenNatty"
               >Natania Ezeigwe</a
             >
           </strong>
           and is open source on
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/QueenNatty/world-clock-project"
             >GitHub</a
@@ -54,6 +60,7 @@
         <p>
           Hosted on
           <a
+            rel="noopener noreferrer"
             target="_blank"
             href="https://world-clock-project-eegv.onrender.com"
             >Render</a

@@ -7,13 +7,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
     <title>World Clock - Natania Ezeigwe</title>
+
   </head>
   <body>
     <div class="clock-container">
-      <h1>World Clock</h1>
+      <header class="site-header">
+        <h1>World Clock</h1>
+        <p class="subtitle">Compare times from cities around the world</p>
+      </header>
 
       <select id="city-select" aria-label="City Selector">
-        <option value="">Select a city...</option>
+        <option value="">Add or highlight a city…</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
+        <option value="Europe/Paris">Paris</option>
         <option value="Europe/London">London</option>
         <option value="America/New_York">New York</option>
         <option value="Pacific/Auckland">Auckland</option>
@@ -22,49 +28,34 @@
       <div id="los-angeles" class="city">
         <div>
           <h2>Los Angeles</h2>
-          <div class="date">August 24, 2024</div>
+          <div class="date" aria-hidden="false"></div>
         </div>
-
-        <div class="time">06:30:15 <small>AM</small></div>
+        <div class="time" aria-live="polite"></div>
       </div>
 
-      <div class="city" id="paris">
+      <div id="paris" class="city">
         <div>
           <h2>Paris</h2>
-          <div class="date">AUgust 24, 2024</div>
+          <div class="date" aria-hidden="false"></div>
         </div>
-
-        <div class="time">10:30:15 <small>AM</small></div>
+        <div class="time" aria-live="polite"></div>
       </div>
+
+      <div id="dynamic-cities"></div>
     </div>
 
     <footer>
       <div>
         <p>
           Created by ❤️<strong>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="http://www.github.com/QueenNatty"
-              >Natania Ezeigwe</a
-            >
+            <a rel="noopener noreferrer" target="_blank" href="http://www.github.com/QueenNatty">Natania Ezeigwe</a>
           </strong>
           and is open source on
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/QueenNatty/world-clock-project"
-            >GitHub</a
-          >.
+          <a rel="noopener noreferrer" target="_blank" href="https://github.com/QueenNatty/world-clock-project">GitHub</a>.
         </p>
         <p>
           Hosted on
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://world-clock-project-eegv.onrender.com"
-            >Render</a
-          >
+          <a rel="noopener noreferrer" target="_blank" href="https://world-clock-project-eegv.onrender.com">Render</a>
         </p>
       </div>
     </footer>
